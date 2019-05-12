@@ -6,6 +6,8 @@ import Home from './HomeComponent';
 
 import {SECTORS} from '../shared/sectors';
 import {DATA} from '../shared/sidebarData';
+import {CHARTS} from '../shared/topCharts';
+import {FILTERS} from '../shared/smartFilters';
 
 import {Switch, Redirect, Route} from 'react-router-dom';
 
@@ -14,7 +16,9 @@ class Main extends Component{
         super(props);
         this.state={
             sectors: SECTORS,
-            data: DATA
+            data: DATA,
+            topCharts: CHARTS,
+            filters: FILTERS
         }
     }
 
@@ -23,7 +27,8 @@ class Main extends Component{
             <div>
                 <Header />
                 <Switch>
-                    <Route path="/home" component={() => <Home data={this.state.data} sectors={this.state.sectors} />} />
+                    <Route path="/home" component={() => <Home data={this.state.data} sectors={this.state.sectors} 
+                                                            charts={this.state.topCharts} filters={this.state.filters} />} />
                     <Redirect to="/home" />
                 </Switch>
                 

@@ -1,8 +1,14 @@
 import React from 'react';
-import {Card, CardTitle, CardBody, CardText, Button} from 'reactstrap';
+import {Card, CardTitle, CardBody, CardText, Button, Row, Col} from 'reactstrap';
 
 
 const DiscoverSectors = (props) =>{
+
+    const cardStyle = {
+        backgroundColor: '#262626',
+        color: 'white',
+        borderColor: 'white'
+    }
 
     const buttonsRender = props.sectors.map((sec) => {
         return(
@@ -20,27 +26,27 @@ const DiscoverSectors = (props) =>{
     const CardsRender = props.sectors.map((sec)=>{
         
         return(
-            <Card key={sec.id}>
-                
-                <div className="container">
-                    <CardBody>
-                        <div className="row">
-                            <div className="col col-sm-6">
-                                <CardTitle>
-                                    <h3>{sec.name}</h3>
-                                </CardTitle>
-                            </div>
-                            <div className="col col-sm-4">
-                                View Industries
-                            </div>
-                        </div>
-                        <Button>{sec.internalOptions}</Button>
-                       
-                
+            <Row>
+                <Col md='6' >         
+                    <Card key={sec.id} style={cardStyle} className="m-2">                  
+                            <CardBody>
+                                <Row>
+                                    <Col md="6">
+                                        <CardTitle>
+                                            <h3>{sec.name}</h3>
+                                        </CardTitle>
+                                    </Col>
+                                    <Col md="6">
+                                        <CardText>View Industries</CardText>
+                                    </Col>
+                                </Row>          
+                                
+                                <Button>{sec.internalOptions}</Button>
+                            </CardBody>
                         
-                    </CardBody>
-                </div>
-            </Card>
+                    </Card>
+                </Col>
+            </Row>
         )
     })
 
@@ -48,7 +54,8 @@ const DiscoverSectors = (props) =>{
 
     return(
         <div className="container">
-            <Card>
+            <Card style={{backgroundColor: '#262626',
+        color: 'white',}}>
                 <CardBody>
                     <CardTitle>Discover the popular sectors we track</CardTitle>
                     <CardText>Lorem ipsum dolor ist amet, consecteire</CardText>

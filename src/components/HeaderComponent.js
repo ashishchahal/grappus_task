@@ -30,8 +30,8 @@ class Header extends Component{
     render(){
         return(
             <div>
-                <Navbar dark expand="md">
-                    <div className="container">
+                <Navbar dark expand="sm">
+                    <div className="container-fluid">
                         <NavbarBrand href="" className="mr-auto">
                             <h2>Kognetics</h2>
                         </NavbarBrand>
@@ -46,7 +46,7 @@ class Header extends Component{
                                         placeholder="Search for companies, people & investors" 
                                          />
                                 </NavItem>
-                                <Dropdown isOpen={this.state.dropdownOpen} toggle={this.toggleDropdown}>
+                                <Dropdown nav isOpen={this.state.dropdownOpen} toggle={this.toggleDropdown}>
                                     <DropdownToggle caret>
                                         Mrinalini Saha
                                     </DropdownToggle>

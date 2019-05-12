@@ -8,6 +8,35 @@
 }
 
 .card{
-  color: rgb(34, 32, 32);
+  background-color: rgb(56, 52, 52);
   text: white
+}
+
+.divBorder{
+  border: 0.01rem solid #A9A9A9;
+  margin: 3px;
+  padding: 6px
+}
+
+.link{
+  color: #A9A9A9
+}
+
+.card-title {
+  font-size: 1.3rem;
+  font-weight: 1rem
+}
+
+.card-subtitle {
+  font-size: 0.8rem;
+  font-weight: 1rem
+}
+
+
+
+.midCard-buttons{
+  border: 0.05rem solid #4b769b !important;
+  background-color: black !important;
+  font-size: 0.9rem !important;
+  margin: .25rem !important
 }

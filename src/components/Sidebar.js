@@ -1,5 +1,5 @@
 import React from 'react';
-import {Card, CardImg, CardTitle, CardBody, CardText,Form, Input, Button  } from 'reactstrap';
+import {Card, CardImg, CardTitle, CardSubtitle, CardBody, CardText,Form, Input, Button  } from 'reactstrap';
 
 
 const RenderSidebarItem = ({data}) => {
@@ -45,9 +45,8 @@ class Sidebar extends React.Component{
         
         const menu = this.props.data.map((data) => {
             return(
-                <div className="container">
-                    <Card style={{backgroundColor: '#262626',
-                                    color: 'white'}} key={data.id}>
+                <div className="container p-2">
+                    <Card style={cardStyle} key={data.id}>
                         
                         <CardBody>
                             <div className="row">
@@ -56,7 +55,7 @@ class Sidebar extends React.Component{
                                 </div>
                                 <div className="col col-sm-10">
                                     <CardTitle>{data.title}</CardTitle>
-                                    <CardText>Lorem Ipsum arya sansa jon bran stark</CardText>
+                                    <CardSubtitle>Lorem Ipsum arya sansa jon bran stark</CardSubtitle>
                                 </div>
                             </div>     
                             
