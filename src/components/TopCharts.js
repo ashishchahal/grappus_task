@@ -36,7 +36,7 @@ const TopCharts = (props) =>{
                             <Button type="button" className="midCard-buttons m-1"> Founders </Button>
                         </Row>
                         <Row className="m-1">
-                            <Button type="button" className="midCard-buttons">Institutional Investors</Button>
+                            <Button type="button" className="midCard-buttons ">Institutional Investors</Button>
                             <Button type="button" className="midCard-buttons"> Boardmembers</Button>
                         </Row>
                         <Row className="m-1">

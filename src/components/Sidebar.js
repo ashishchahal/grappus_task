@@ -43,34 +43,39 @@ class Sidebar extends React.Component{
         }
 
         
-        const menu = this.props.data.map((data) => {
+        const cardRenders = this.props.data.map((data) => {
             return(
-                <div className="container p-2">
+                <div className="container mr-2 p-2 d-none d-md-block">
                     <Card style={cardStyle} key={data.id}>
                         
                         <CardBody>
-                            <div className="row">
+                            <div className="row pb-2">
                                 <div className="col col-sm-2">
-                                    <div><span className={data.icon}> </span></div>
+                                    <div style={{border:'2px solid white'}}><span className={data.icon}> </span></div>
                                 </div>
                                 <div className="col col-sm-10">
                                     <CardTitle>{data.title}</CardTitle>
-                                    <CardSubtitle>Lorem Ipsum arya sansa jon bran stark</CardSubtitle>
+                                    <CardSubtitle>Lorem Ipsum </CardSubtitle>
                                 </div>
                             </div>     
                             
                             
                             
-                                <Form onSubmit={this.handleSubmit} >
+                                
+                                
+                            <Form onSubmit={this.handleSubmit} >
                                 <div className="row">
-                                    <div className="col col-sm-10 mr-0 p-0">
-                                        <Input type="text" placeholder="Search a company" value={this.state.value} onChange={this.handleChange} />
+                                    <div className="col col-lg-8 col-md-8">
+                                        <Input type="text" style={{width:150 ,maxWidth: 250, backgroundColor: '#262626'}} placeholder="Search a company" 
+                                            value={this.state.value} onChange={this.handleChange} />
                                     </div>
-                                    <div className="col col-sm-2 p-0">
-                                        <Button type="submit"><span className="fa fa-angle-right"></span></Button>
+                                    <div className="col-12 col-lg-auto col-md-auto">
+                                        <Button type="submit" style={{backgroundColor: '#262626'}}><span className="fa fa-angle-right"></span></Button>
                                     </div>
-                                </div>  
-                                </Form>
+                                </div> 
+                            </Form>
+                                 
+                                
                             
                         </CardBody>
                         
@@ -82,8 +87,8 @@ class Sidebar extends React.Component{
         })
     
         return(
-            <div className="container">
-                {menu} 
+            <div>
+                {cardRenders} 
             </div>
         );
     }

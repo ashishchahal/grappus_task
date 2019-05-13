@@ -1,5 +1,5 @@
 import React from 'react';
-import {Card,Button } from 'reactstrap';
+import {Card,Button, TabPane, TabContent } from 'reactstrap';
 import {Link} from 'react-router-dom'
 
 
@@ -9,6 +9,11 @@ const SmartFilter = (props) =>{
     const cardStyle = {
         backgroundColor: '#262626',
         color: 'white'
+    }
+
+    const roundedBorder ={
+        borderRadius: 20,
+        marginLeft: 5.8
     }
 
     /*const ButtonsRender = {
@@ -27,22 +32,22 @@ const SmartFilter = (props) =>{
                     <div>Lorem ipsum dolor sit amet, consectitur</div>
                 </div>
 
-                <div className="row p-2" style={{borderBottom: '2px solid #696969', color: 'white'}}>
-                    <Link to="/home" className="m-1 mx-2 px-2">Company</Link>
-                    <Link to="/home" className="m-1 mx-2 px-2">Investor</Link>
-                    <Link to="/home" className="m-1 mx-2 px-2">Person</Link>
-                    <Link to="/home" className="m-1 mx-2 px-2">Sector</Link>
-                    <Link to="/home" className="m-1 mx-2 px-2">Industry</Link>
-                    <Link to="/home" className="m-1 mx-2 px-2">Sub-Industry</Link>
-                    <Link to="/home" className="m-1 mx-2 px-2">Region</Link>
+                <div className="row p-2" style={{borderBottom: '1px solid #696969', color: 'white'}}>
+                    <Link className="m-1 mx-2 px-2 linkHeading">Company</Link>
+                    <Link to="/home" className="m-1 mx-2 px-2 linkHeading">Investor</Link>
+                    <Link to="/home" className="m-1 mx-2 px-2 linkHeading">Person</Link>
+                    <Link to="/home" className="m-1 mx-2 px-2 linkHeading">Sector</Link>
+                    <Link to="/home" className="m-1 mx-2 px-2 linkHeading">Industry</Link>
+                    <Link to="/home" className="m-1 mx-2 px-2 linkHeading">Sub-Industry</Link>
+                    <Link to="/home" className="m-1 mx-2 px-2 linkHeading">Region</Link>
                 </div>
 
                 <div className="row p-2">
-                <Button rounded outline type="button" color="secondary" className="m-1">Profile</Button>
-                <Button rounded outline type="button" color="warning" className="m-1">Comparables</Button>
-                <Button rounded outline type="button" color="success" className="m-1">Strategic gaps</Button>
-                <Button rounded outline type="button" color="danger" className="m-1">Potential acquirers</Button>
-                <Button rounded outline type="button" color="primary" className="m-1">Fase path</Button>
+                <Button outline type="button" color="secondary" className="m-1" style={roundedBorder}>Profile</Button>
+                <Button outline type="button" color="warning" className="m-1" style={roundedBorder}>Comparables</Button>
+                <Button outline type="button" color="success" className="m-1" style={roundedBorder}>Strategic gaps</Button>
+                <Button outline type="button" color="danger" className="m-1" style={roundedBorder}>Potential acquirers</Button>
+                <Button outline type="button" color="primary" className="m-1" style={roundedBorder}>Fase path</Button>
                     </div>
 
                 
@@ -50,30 +55,30 @@ const SmartFilter = (props) =>{
                         <div className="col-12 col-sm-6 p-1">
                             <div className=" divBorder">
                                 What are the most critical strategic gaps for a company across its portfolio?
-                                <Button>Strategic Gaps</Button>                             
+                                <Button outline style={roundedBorder} color="success" size="sm">Strategic Gaps</Button>                             
                             </div>
                             <div className=" divBorder">
                                 Who can potentially acquire the company?
-                                <Button>Potential acquirers</Button>
+                                <Button outline style={roundedBorder} color="danger" size="sm">Potential acquirers</Button>
                             </div>
                             <div className=" divBorder">
                                 List of public comparables for a company?
-                                <Button>Comparables></Button>
+                                <Button outline style={roundedBorder} color="warning" size="sm">Comparables></Button>
                             </div>
                             
                         </div>
                         <div className="col-12 col-sm-6 p-1">
                             <div className="divBorder">
                                 What are the strategic gaps for a company based on benchmarking?
-                                <Button>Strategic Gaps</Button>
+                                <Button outline style={roundedBorder} color="success" size="sm">Strategic Gaps</Button>
                             </div>
                             <div className="divBorder">
                                 Lst of industry segments that a company operates in?
-                                <Button>Profile</Button>
+                                <Button outline style={roundedBorder} color="secondary" size="sm">Profile</Button>
                             </div>
                             <div className="divBorder">
                                 What is the alst path to a company?
-                                <Button>Fast Path</Button>
+                                <Button outline style={roundedBorder} color="primary" size="sm">Fast Path</Button>
                             </div>
                         </div>
                     </div>

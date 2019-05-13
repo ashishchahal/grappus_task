@@ -12,7 +12,7 @@ const DiscoverSectors = (props) =>{
 
     const buttonsRender = props.sectors.map((sec) => {
         return(
-            <Button type="button" className="m-1">{sec.name}</Button>
+            <Button type="button"  className="rounded-pill " className="m-1">{sec.name}</Button>
         )
     })
 
@@ -26,27 +26,34 @@ const DiscoverSectors = (props) =>{
     const CardsRender = props.sectors.map((sec)=>{
         
         return(
-            <Row>
-                <Col md='6' >         
+                <Col md="6">   
                     <Card key={sec.id} style={cardStyle} className="m-2">                  
                             <CardBody>
                                 <Row>
-                                    <Col md="6">
+                                    <Col md="8">
                                         <CardTitle>
-                                            <h3>{sec.name}</h3>
+                                            {sec.name}
                                         </CardTitle>
                                     </Col>
-                                    <Col md="6">
-                                        <CardText>View Industries</CardText>
+                                    <Col md="4">
+                                        <CardText style={{fontWeight: 100, fontSize: 12, fontColor: 'gray'}}>View Industries</CardText>
                                     </Col>
                                 </Row>          
                                 
-                                <Button>{sec.internalOptions}</Button>
+                                <Row>
+                                    {sec.internalOptions.map((int)=>  {
+                                        return(
+                                            <Button className="m-1" type="button">{int}</Button>
+                                        )
+                                    }                               
+                                        
+                                    
+                                )}
+                                </Row>
                             </CardBody>
                         
                     </Card>
-                </Col>
-            </Row>
+                </Col> 
         )
     })
 
@@ -57,12 +64,20 @@ const DiscoverSectors = (props) =>{
             <Card style={{backgroundColor: '#262626',
         color: 'white',}}>
                 <CardBody>
-                    <CardTitle>Discover the popular sectors we track</CardTitle>
+                    <CardTitle style={{fontWeight: 500, fontSize: 30,}}>Discover the popular sectors we track</CardTitle>
                     <CardText>Lorem ipsum dolor ist amet, consecteire</CardText>
-                    {buttonsRender}
-                    <div className="row">
+                    <Row>
+                        {buttonsRender}
+                    </Row>
+                    
+                    <Row>
+                        
                         {CardsRender}
-                    </div>
+                        
+                        
+                    </Row>
+                        
+                
                 </CardBody>
             </Card>
         </div>

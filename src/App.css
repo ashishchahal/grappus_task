@@ -15,7 +15,8 @@
 .divBorder{
   border: 0.01rem solid #A9A9A9;
   margin: 3px;
-  padding: 6px
+  padding: 6px;
+
 }
 
 .link{
@@ -23,7 +24,7 @@
 }
 
 .card-title {
-  font-size: 1.3rem;
+  font-size: 1rem;
   font-weight: 1rem
 }
 
@@ -32,11 +33,22 @@
   font-weight: 1rem
 }
 
-
+.form-inline{
+  text-align: center
+}
 
 .midCard-buttons{
   border: 0.05rem solid #4b769b !important;
   background-color: black !important;
   font-size: 0.9rem !important;
-  margin: .25rem !important
+  margin: .25rem !important;
+  border-radius: 10 rem !important
+}
+
+a{
+  color: white
+}
+
+.linkHeading{
+  color: white
 }
